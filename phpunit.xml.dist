@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+>
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./app</directory>
+        </include>
+    </coverage>
+    <testsuite name="Tests">
+        <directory suffix="Test.php">./tests</directory>
+    </testsuite>
+    <php>
+        <server name="APP_ENV" value="testing"/>
+        <server name="CACHE_DRIVER" value="array"/>
+        <server name="SESSION_DRIVER" value="array"/>
+        <server name="QUEUE_DRIVER" value="sync"/>
+        <server name="SERVICEBUS_NAMESPACE" value="test"/>
+        <server name="SERVICEBUS_SAS_NAME" value="test_key"/>
+        <server name="SERVICEBUS_SAS_KEY" value="test_key_value"/>
+    </php>
+</phpunit>

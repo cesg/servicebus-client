@@ -1,0 +1,31 @@
+{
+    "name": "cesg/servicebus-client",
+    "description": "Azure ServiceBus Guzzle Client",
+    "type": "library",
+    "require": {
+        "php": "^7.4|^8.0",
+        "guzzlehttp/guzzle": "^7.3",
+        "illuminate/config": "^8.42",
+        "illuminate/support": "^8.42",
+        "illuminate/contracts": "^8.42"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "orchestra/testbench": "^6.17",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cesg\\ServiceBus\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cesg\\ServiceBus\\Tests\\": "tests/"
+        }
+    },
+    "authors": [{
+        "name": "CristianSG",
+        "email": "cesgbla@gmail.com"
+    }]
+}
